@@ -8,6 +8,7 @@ RUN apt update && \
     echo "deb https://download.mono-project.com/repo/ubuntu stable-bionic main" | tee /etc/apt/sources.list.d/mono-official-stable.list && \
     apt update && \
     apt -y remove dirmngr && \
+    apt -y autoremove && \
     apt -y install mono-runtime && \
     rm -rf /var/lib/apt/lists/*
 
